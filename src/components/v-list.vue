@@ -16,6 +16,13 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.v-list {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 </style>
