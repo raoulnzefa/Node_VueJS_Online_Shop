@@ -1,15 +1,23 @@
 <template>
   <div class="v-list-item">
-    <img src="" alt="" />
-    <p>Item 1</p>
-    <p>Price 100</p>
-    <button>Add to cart</button>
+    <img :src=" '../assets/images/'+ product_data.image " alt="" />
+    <p class="v-list-item-name">{{product_data.name}}</p>
+    <p class="v-list-item-price">Price {{product_data.price}}</p>
+    <button class="v-list-item-add-to-cart_btn btn">Add to cart</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "v-list-item"
+  name: "v-list-item",
+  props:{
+    product_data: {
+      type: Object,
+      default() {
+        return {}
+      }
+    }
+  }
 }
 </script>
 
