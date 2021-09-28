@@ -1,6 +1,9 @@
 <template>
-  <div class="v-list">
-    <h1>List</h1>
+  <div class="v-list  v-list__list">
+<!--    <h1>List</h1>-->
+      <vItem />
+      <vItem />
+      <vItem />
       <vItem />
   </div>
 </template>
