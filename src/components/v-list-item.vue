@@ -1,6 +1,6 @@
 <template>
   <div class="v-list-item">
-    <img :src=" '../assets/images/'+ product_data.image " alt="" />
+    <img class="v-list-item-image" :src="require( '../assets/images/'+ product_data.image)" alt=""/>
     <p class="v-list-item-name">{{product_data.name}}</p>
     <p class="v-list-item-price">Price {{product_data.price}}</p>
     <button class="v-list-item-add-to-cart_btn btn">Add to cart</button>
@@ -27,7 +27,7 @@ export default {
   box-shadow: 0 0 8px 0 #e0e0e0;
   padding: $padding*2;
   margin-bottom: $margin*2;
-  &__image {
+  &-image {
     width: 100px;
   }
 }
