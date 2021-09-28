@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <p>Hello World!</p>
-    <v-wrapper/>
+    <vWrapper/>
   </div>
 </template>
 
