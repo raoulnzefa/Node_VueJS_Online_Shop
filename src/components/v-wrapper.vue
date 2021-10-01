@@ -1,6 +1,6 @@
 <template>
   <div class="v-wrapper">
-    <p>{{title}}</p>
+<!--    <p>{{title}}</p>-->
     <vList/>
 <!--    <v-list />-->
     <vCart/>

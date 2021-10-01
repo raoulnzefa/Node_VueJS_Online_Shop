@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <p>Hello World!</p>
+<!--    <p>Hello World!</p>-->
     <vWrapper/>
   </div>
 </template>
