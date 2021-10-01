@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+//import { createApp } from 'vue'
 import { createStore } from 'vuex'
 
 const store = createStore({
@@ -14,7 +14,7 @@ const store = createStore({
     }
 })
 export default store
-const app = createApp({})
+//const app = createApp({})
 
-app.use(store)
+//app.use(store)
 
