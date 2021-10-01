@@ -16,9 +16,10 @@ const store = createStore({
           return axios('http://localhost:3000/products', {
             method: "GET"
           })
-              .then((AsyncResponse<any> ) => {
-              commit('SET_PRODUCTS_TO_STATE', products);
-          })
+              .then((products) => {
+              commit('SET_PRODUCTS_TO_STATE', products.data);
+                  return products;
+              })
       }
     },
     getters: {
