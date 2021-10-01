@@ -2,14 +2,12 @@
 import { createStore } from 'vuex'
 
 const store = createStore({
-    state () {
-        return {
-            count: 0
-        }
+    state: {
+        products:[]
     },
-    mutations: {
-        increment (state) {
-            state.count++
+    getters: {
+        PRODUCTS(state){
+            return state.products;
         }
     }
 })
