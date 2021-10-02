@@ -36,7 +36,9 @@ export default {
 
   },
   mounted() {
-    this.$set(this.cart_item_data, 'quantity',1)
+    //this.$set(this.cart_item_data, 'quantity',1)
+    //this.cart_item_data.quantity= 1;
+    //this.$store.dispatch('addToCart', {...this.product, quantity: this.quantity})
   }
 
 }
