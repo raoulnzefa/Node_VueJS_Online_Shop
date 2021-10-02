@@ -9,7 +9,7 @@
     <div class="v-cart-item-quantity">
       <p>{{cart_item_data.quantity}}</p>
     </div>
-    <button @click="deleteFromCart">Delete</button>
+    <button @click="deleteFromCart()">Delete</button>
   </div>
 </template>
 

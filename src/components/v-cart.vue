@@ -37,7 +37,7 @@ export default {
     deleteFromCart(index){
       this.DELETE_FROM_CART(index)
     }
-  },
+  }
 }
 
 
