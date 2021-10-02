@@ -1,6 +1,15 @@
 <template>
-  <div>
-    <img :src="require( '../assets/images/'+ cart_item_data.image)" alt="" />
+  <div class="v-cart-item">
+    <img class="v-cart-item-img" :src="require( '../assets/images/'+ cart_item_data.image)" alt="" />
+    <div class="v-cart-item-info">
+      <p>{{cart_item_data.name}}</p>
+      <p>{{cart_item_data.price}}</p>
+      <p>{{cart_item_data.article}}</p>
+    </div>
+    <div class="v-cart-item-quantity">
+      <p>{{cart_item_data.quantity}}</p>
+    </div>
+    <button>Delete</button>
   </div>
 </template>
 
@@ -16,18 +25,36 @@ export default {
     }
   },
   data(){
+    return {
 
+    }
   },
   components: {
 
   },
   methods: {
 
+  },
+  mounted() {
+    this.$set(this.cart_item_data, 'quantity',1)
   }
 
 }
 </script>
 
-<style>
+<style lang="scss">
+.v-cart-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: 0 0 8px 0 #e0e0e0;
+  padding: $padding*2;
+  margin-bottom: $margin*2;
+  &-img{
+     width: 55px;
+
+   }
+}
 
 </style>

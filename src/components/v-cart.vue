@@ -2,6 +2,9 @@
   <div class="v-cart">
     <p>Cart</p>
     <VCartItem
+        v-for="item in cart_data"
+        :key="item.article"
+        :cart_item_data="item"
     />
   </div>
 </template>
