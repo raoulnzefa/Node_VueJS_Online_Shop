@@ -34,10 +34,10 @@ export default {
 .v-list-item {
   flex-basis: 25%;
   box-shadow: 0 0 8px 0 #e0e0e0;
-  padding: $padding*2;
-  margin-bottom: $margin*2;
-  &-image {
-    width: 100px;
-  }
+  padding: 16px;
+  margin-bottom: 16px;
+  //&-image {
+  //  width: 100px;
+  //}
 }
 </style>

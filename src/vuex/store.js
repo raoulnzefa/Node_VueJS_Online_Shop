@@ -1,7 +1,11 @@
-import { createStore } from 'vuex'
+//import { createStore } from 'vuex'
 import axios from "axios";
 
-const store = createStore({
+import Vue from 'vue'
+import Vuex from 'vuex'
+Vue.use(Vuex);
+
+let store = new Vuex.Store({
     state: {
         products:[],
         cart:[],

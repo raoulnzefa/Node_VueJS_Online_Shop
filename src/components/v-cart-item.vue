@@ -36,9 +36,7 @@ export default {
 
   },
   mounted() {
-    //this.$set(this.cart_item_data, 'quantity',1)
-    //this.cart_item_data.quantity= 1;
-    //this.$store.dispatch('addToCart', {...this.product, quantity: this.quantity})
+    this.$set(this.cart_item_data, 'quantity',1)
   }
 
 }
@@ -51,12 +49,12 @@ export default {
   align-items: center;
   flex-wrap: nowrap;
   box-shadow: 0 0 8px 0 #e0e0e0;
-  padding: $padding*2;
-  margin-bottom: $margin*2;
-  &-img{
-     width: 55px;
-
-   }
+  padding: 16px;
+  margin-bottom: 16px;
+  //&-img{
+  //   width: 55px;
+  //
+  // }
 }
 
 </style>
