@@ -36,8 +36,12 @@ export default {
   box-shadow: 0 0 8px 0 #e0e0e0;
   padding: 16px;
   margin-bottom: 16px;
+  width: 100px;
   //&-image {
   //  width: 100px;
   //}
 }
+//.v-list-item-image{
+//  width: 50px;
+//}
 </style>
