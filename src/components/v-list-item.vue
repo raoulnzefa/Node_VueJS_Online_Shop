@@ -3,7 +3,11 @@
     <img class="v-list-item-image" :src="require( '../assets/images/'+ product_data.image)" alt=""/>
     <p class="v-list-item-name">{{product_data.name}}</p>
     <p class="v-list-item-price">Price {{product_data.price}}</p>
-    <button class="v-list-item-add-to-cart_btn btn">Add to cart</button>
+    <button
+        class="v-list-item-add-to-cart_btn btn"
+        @click="addToCart"
+    >Add to cart
+    </button>
   </div>
 </template>
 
@@ -16,6 +20,11 @@ export default {
       default() {
         return {}
       }
+    }
+  },
+  methods:{
+    addToCart(){
+      this.$emit('addToCart',this.product_data);
     }
   }
 }

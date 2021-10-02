@@ -2,9 +2,9 @@
   <div class="v-wrapper">
 <!--    <p>{{title}}</p>-->
     <vList/>
-<!--    <v-list />-->
     <vCart
-    v-if="CART.length"
+      v-if="CART.length"
+
     />
   </div>
 </template>
