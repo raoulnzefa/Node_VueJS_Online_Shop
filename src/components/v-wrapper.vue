@@ -4,7 +4,7 @@
     <vList/>
     <vCart
       v-if="CART.length"
-
+      :cart_data="CART"
     />
   </div>
 </template>
@@ -20,6 +20,9 @@ import {mapGetters} from 'vuex'
     components: {
       vList,
       vCart
+    },
+    props:{
+
     },
     data(){
       return {
