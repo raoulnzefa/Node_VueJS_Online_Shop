@@ -3,7 +3,9 @@
 <!--    <p>{{title}}</p>-->
     <vList/>
 <!--    <v-list />-->
-    <vCart/>
+    <vCart
+    v-if="CART.length"
+    />
   </div>
 </template>
 
@@ -11,6 +13,7 @@
 <script>
 import vList from './v-list'
 import vCart from './v-cart'
+import {mapGetters} from 'vuex'
 
   export default {
     name: "v-wrapper",
@@ -22,6 +25,11 @@ import vCart from './v-cart'
       return {
         title: "Wrapper"
       }
+    },
+    computed:{
+      ...mapGetters([
+          'CART'
+      ])
     },
     mounted() {
       console.log('Hello world')

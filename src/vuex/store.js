@@ -1,10 +1,10 @@
-//import { createApp } from 'vue'
 import { createStore } from 'vuex'
 import axios from "axios";
 
 const store = createStore({
     state: {
-        products:[]
+        products:[],
+        cart:[],
     },
     mutations: {
         SET_PRODUCTS_TO_STATE: (state, products) => {
@@ -25,11 +25,12 @@ const store = createStore({
     getters: {
         PRODUCTS(state){
             return state.products;
+        },
+        CART(state){
+            return state.cart
         }
     }
 })
 export default store
-//const app = createApp({})
 
-//app.use(store)
 

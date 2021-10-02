@@ -1,6 +1,8 @@
 <template>
   <div class="v-cart">
-    <VCartItem />
+    <p>Cart</p>
+    <VCartItem
+    />
   </div>
 </template>
 
@@ -9,8 +11,21 @@ import VCartItem from "./v-cart-item";
 
 export default {
   name: "v-cart",
-  components: {VCartItem}
+  props:{
+
+  },
+  data(){
+
+  },
+  components: {
+    VCartItem
+  },
+  methods: {
+
+  },
 }
+
+
 </script>
 
 <style>
