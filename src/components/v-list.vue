@@ -1,5 +1,11 @@
 <template>
   <div class="v-list  v-list__list">
+    <router-link to="{ name: 'cart', params: {cart_data: CART} }">
+      <div class="v-list-cart">
+        Cart: {{ CART.length }}
+      </div>
+    </router-link>
+
 <!--    <h1>List</h1>-->
       <vItem
         v-for="product in PRODUCTS"
@@ -37,7 +43,8 @@ export default {
   },
   computed:{
     ...mapGetters([
-        'PRODUCTS'
+        'PRODUCTS',
+        'CART'
     ]),
 
   },
@@ -60,5 +67,13 @@ export default {
     justify-content: space-between;
     align-items: center;
   }
+}
+.v-list-cart{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 16px;
+  border: solid 1px #2c3e50;
+  margin-bottom: 56px;
 }
 </style>

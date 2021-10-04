@@ -1,26 +1,27 @@
 <template>
   <div class="v-wrapper">
 <!--    <p>{{title}}</p>-->
-    <vList/>
-    <vCart
-      v-if="CART.length"
-      :cart_data="CART"
-    />
+    <router-view></router-view>
+<!--    <vList/>-->
+<!--    <vCart-->
+<!--      v-if="CART.length"-->
+<!--      :cart_data="CART"-->
+<!--    />-->
   </div>
 </template>
 
 
 <script>
-import vList from './v-list'
-import vCart from './v-cart'
+// import vList from './v-list'
+// import vCart from './v-cart'
 import {mapGetters} from 'vuex'
 
   export default {
     name: "v-wrapper",
-    components: {
-      vList,
-      vCart
-    },
+    // components: {
+    //   vList,
+    //   vCart
+    // },
     props:{
 
     },
