@@ -1,5 +1,10 @@
 <template>
   <div class="v-cart">
+    <router-link :to="{ name: 'catalog'}">
+      <div class="v-list-cart">
+        To catalog
+      </div>
+    </router-link>
     <p>Cart</p>
     <VCartItem
         v-for="(item, index) in cart_data"
