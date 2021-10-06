@@ -15,7 +15,7 @@
     />
     <div class="v-cart-total">
       <p class="v-total-name">Total</p>
-      <p></p>
+      <p>{{ totalSumma }}</p>
     </div>
   </div>
 </template>
@@ -30,7 +30,23 @@ export default {
     cart_data: {
       type: Array,
       default() {
-        return [];
+        return []
+      }
+    }
+  },
+  computed:{
+    totalSumma() {
+      let result = []
+      if (this.cart_data.length) {
+        for (let item in this.cart_data) {
+          result.push(item.price * item.quantity)
+        }
+        result = result.reduce(function (sum, el) {
+          return sum + el;
+        })
+        return result;
+      } else {
+        return 0
       }
     }
   },
@@ -62,8 +78,11 @@ export default {
   padding: 16px;
   display: flex;
   justify-content: center;
+  background: #2c3e50;
+  color: aliceblue;
+  font-size: 20px;
 }
 .v-total-name{
-
+  margin-right: 16px;
 }
 </style>
