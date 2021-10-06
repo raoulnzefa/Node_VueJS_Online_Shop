@@ -13,6 +13,10 @@
         :cart_item_data="item"
         @deleteFromCart="deleteFromCart(index)"
     />
+    <div class="v-cart-total">
+      <p>Total</p>
+      <p></p>
+    </div>
   </div>
 </template>
 
