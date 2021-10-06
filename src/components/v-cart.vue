@@ -14,7 +14,7 @@
         @deleteFromCart="deleteFromCart(index)"
     />
     <div class="v-cart-total">
-      <p>Total</p>
+      <p class="v-total-name">Total</p>
       <p></p>
     </div>
   </div>
@@ -54,5 +54,16 @@ export default {
 </script>
 
 <style>
+.v-cart-total{
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+.v-total-name{
 
+}
 </style>
