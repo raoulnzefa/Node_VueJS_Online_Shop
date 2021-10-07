@@ -12,6 +12,8 @@
         :key="item.article"
         :cart_item_data="item"
         @deleteFromCart="deleteFromCart(index)"
+        @increaseQuantity="increaseQuantity(index)"
+        @decreaseQuantity="decreaseQuantity(index)"
     />
     <div class="v-cart-total">
       <p class="v-total-name">Total</p>
@@ -59,11 +61,19 @@ export default {
   },
   methods: {
     ...mapActions([
-        'DELETE_FROM_CART'
+      'DELETE_FROM_CART',
+      'INCREASE_QUANTITY',
+      'DECREASE_QUANTITY'
     ]),
     deleteFromCart(index){
       this.DELETE_FROM_CART(index)
-    }
+    },
+    increaseQuantity(index){
+      this.INCREASE_QUANTITY(index)
+    },
+    decreaseQuantity(index){
+      this.DECREASE_QUANTITY(index)
+    },
   }
 }
 

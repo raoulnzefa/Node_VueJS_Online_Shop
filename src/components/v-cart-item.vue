@@ -16,6 +16,8 @@
 </template>
 
 <script>
+// import {mapActions} from "vuex"
+
 export default {
   name: "v-cart-item",
   props:{
@@ -31,15 +33,21 @@ export default {
   },
   components: {},
   methods: {
+    increaseQuantity(){
+      this.$emit('incrementQuantity')
+    },
+    decreaseQuantity(){
+      this.$emit('decrementQuantity')
+    },
     deleteFromCart(){
       this.$emit('deleteFromCart')
     },
-    increaseQuantity(){
-      this.cart_item_data.quantity++
-    },
-    decreaseQuantity(){
-      this.cart_item_data.quantity--
-    },
+    // increaseQuantity(){
+    //   this.INCREASE_QUANTITY()
+    // },
+    // decreaseQuantity(){
+    //   this.DECREASE_QUANTITY()
+    // },
   },
   mounted() {
     this.$set(this.cart_item_data, 'quantity',1)
@@ -57,10 +65,6 @@ export default {
   box-shadow: 0 0 8px 0 #e0e0e0;
   padding: 16px;
   margin-bottom: 16px;
-  //&-img{
-  //   width: 55px;
-  //
-  // }
 }
 .v-cart-item-img{
   width: 55px;

@@ -32,6 +32,12 @@ let store = new Vuex.Store({
         REMOVE_FROM_CART: (state, index) => {
             state.cart.splice(index,1)
         },
+        INCREASE_QUANTITY: (state, index) => {
+            state.cart.splice(index,1)
+        },
+        DECREASE_QUANTITY: (state, index) => {
+            state.cart.splice(index,1)
+        },
     },
     actions: {
       GET_PRODUCTS_FROM_API({commit}){
@@ -49,11 +55,11 @@ let store = new Vuex.Store({
       DELETE_FROM_CART({commit}, index){
           commit('REMOVE_FROM_CART', index);
         },
-      INCREASE_QUANTITY({commit}){
-          commit('INCREASE');
+      INCREASE_QUANTITY({commit}, index){
+          commit('INCREASE', index);
       },
-      DECREASE_QUANTITY({commit}){
-          commit('DECREASE');
+      DECREASE_QUANTITY({commit}, index){
+          commit('DECREASE', index);
       }
     },
     getters: {
