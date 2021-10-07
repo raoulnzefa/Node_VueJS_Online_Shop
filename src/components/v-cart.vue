@@ -8,7 +8,7 @@
     <p>Cart</p>
     <p v-if="!cart_data.length">Cart is empty</p>
     <VCartItem
-        v-for="(item, index) in cart_data"
+        v-for="(item, index) of cart_data"
         :key="item.article"
         :cart_item_data="item"
         @deleteFromCart="deleteFromCart(index)"
@@ -36,9 +36,10 @@ export default {
   },
   computed:{
     totalSumma() {
+      //return this.cart_data.reduce((res, item) => res + item.price * item.quantity, 0)
       let result = []
       if (this.cart_data.length) {
-        for (let item in this.cart_data) {
+        for (let item of this.cart_data) {
           result.push(item.price * item.quantity)
         }
         result = result.reduce(function (sum, el) {
@@ -51,7 +52,7 @@ export default {
     }
   },
   data(){
-
+    return {}
   },
   components: {
     VCartItem

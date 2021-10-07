@@ -25,9 +25,7 @@
     //   vList,
     //   vCart
     // },
-    props:{
-
-    },
+    props:{},
     data(){
       return {
         title: "Wrapper"
