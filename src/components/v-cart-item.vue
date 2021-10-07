@@ -8,6 +8,8 @@
     </div>
     <div class="v-cart-item-quantity">
       <p>{{cart_item_data.quantity}}</p>
+      <button @click="increaseQuantity()">+</button>
+      <button @click="decreaseQuantity()">-</button>
     </div>
     <button @click="deleteFromCart()">Delete</button>
   </div>
@@ -25,17 +27,19 @@ export default {
     }
   },
   data(){
-    return {
-
-    }
+    return {}
   },
-  components: {
-
-  },
+  components: {},
   methods: {
     deleteFromCart(){
       this.$emit('deleteFromCart')
-    }
+    },
+    increaseQuantity(){
+      this.cart_item_data.quantity++
+    },
+    decreaseQuantity(){
+      this.cart_item_data.quantity--
+    },
   },
   mounted() {
     this.$set(this.cart_item_data, 'quantity',1)
