@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import vList from '../components/v-list'
+import vList from '../components/list/v-list'
 import vCart from '../components/cart/v-cart'
 
 Vue.use(Router)

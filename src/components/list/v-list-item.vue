@@ -1,6 +1,6 @@
 <template>
   <div class="v-list-item">
-    <img class="v-list-item-image" :src="require( '../assets/images/'+ product_data.image)" alt=""/>
+    <img class="v-list-item-image" :src="require( '../../assets/images/'+ product_data.image)" alt=""/>
     <p class="v-list-item-name">{{product_data.name}}</p>
     <p class="v-list-item-price">Price {{product_data.price}}</p>
     <button
