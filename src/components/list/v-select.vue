@@ -3,13 +3,16 @@
     <p
       class="title"
       @click="areOptionsVisible = !areOptionsVisible"
-    >Select</p>
+    >{{ selected }}
+    </p>
+
     <div class="options"
       v-if="areOptionsVisible"
     >
       <p
         v-for="option in options"
         :key="option.value"
+        @click="selectOption(option)"
       >
         {{ option.name }}
       </p>
@@ -26,11 +29,32 @@ export default {
       default(){
         return []
       }
+    },
+    selected:{
+      type: String,
+      default() {
+        return ""
+      }
     }
   },
   data() {
     return {
       areOptionsVisible: false
+    }
+  },
+  methods:{
+    selectOption(option){
+      this.$emit('select', option)
+      this.areOptionsVisible = false
+    },
+    hideSelect(){
+      this.areOptionsVisible = false
+    },
+    mounted() {
+      document.addEventListener('click', this.hideSelect.bind(this), true )
+    },
+    beforeDestroy() {
+
     }
   }
 }
@@ -53,8 +77,12 @@ export default {
 .options{
   border: solid 1px #2c3e50;
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 0px;
   width: 100%;
+}
+
+.options p:hover{
+  background: cadetblue;
 }
 </style>
