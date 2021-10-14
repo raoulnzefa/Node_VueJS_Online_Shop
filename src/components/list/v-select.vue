@@ -54,7 +54,7 @@ export default {
       document.addEventListener('click', this.hideSelect.bind(this), true )
     },
     beforeDestroy() {
-
+      document.removeEventListener('click', this.hideSelect )
     }
   }
 }
