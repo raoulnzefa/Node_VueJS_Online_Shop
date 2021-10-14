@@ -1,12 +1,18 @@
 <template>
   <div class="v-select">
-    <div class="options">
-      <span
+    <p
+      class="title"
+      @click="areOptionsVisible = !areOptionsVisible"
+    >Select</p>
+    <div class="options"
+      v-if="areOptionsVisible"
+    >
+      <p
         v-for="option in options"
         :key="option.value"
       >
         {{ option.name }}
-      </span>
+      </p>
     </div>
   </div>
 </template>
@@ -23,11 +29,32 @@ export default {
     }
   },
   data() {
-    return {}
+    return {
+      areOptionsVisible: false
+    }
   }
 }
 </script>
 
 <style>
+.title{
+  border: solid 1px #26ae68;
+}
 
+.v-select{
+  position: relative;
+  width: 250px;
+}
+
+.v-select p{
+  margin: 0px;
+}
+
+.options{
+  border: solid 1px #2c3e50;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  width: 100%;
+}
 </style>
